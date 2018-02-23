@@ -13,7 +13,7 @@ But later on, ran into storage issues. Roman suggested that VirtualBox is now de
 
 Following are the final steps that are **working** now.
 
-1. Initialize docker
+1. Initialize docker.  **IMP** The test data is huge - 100G. So alter docker setting to increase storage/disk space from ~65G to ~250G.
 
 Swith to commandline
 
@@ -30,4 +30,4 @@ Swith to commandline
 7. Hopefully bcbio will be in the path now
 
 8. Follow the instructions from documentation to get the test data and test the pipeline (https://bcbio-nextgen.readthedocs.io/en/latest/contents/testing.html#rnaseq-example) 
-
+  . Test data for RNA seq takes quite a while to download (few hours, so be prepared).  
