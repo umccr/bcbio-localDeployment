@@ -14,7 +14,7 @@ But later on, ran into storage issues. Roman suggested that VirtualBox is now de
 Following are the final steps that are **working** now.
 
 1. Initialize docker.  
-  . **IMP** The test data is huge - 100G. So alter docker setting to increase storage/disk space from ~65G to ~250G.
+  - **IMP** The test data is huge - 100G. So alter docker setting to increase storage/disk space from ~65G to ~250G.
 
 Swith to commandline
 
