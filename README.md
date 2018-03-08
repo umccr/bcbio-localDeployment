@@ -129,7 +129,7 @@ Next followed the instructions from: http://bcbio-nextgen.readthedocs.io/en/late
 
 Followed the steps as mentioned at http://bcbio-nextgen.readthedocs.io/en/latest/contents/testing.html#rnaseq-example
 
-**Data** Got fastq files as mentioned by Rory https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4119/samples/
+**Data:** Got fastq files as mentioned by Rory https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4119/samples/
 
 Prepared yaml workflow file as edited by Rory on github. The one generated form template is slightly different.
 
