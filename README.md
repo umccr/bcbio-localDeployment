@@ -81,5 +81,26 @@ Retrieving bcbio-nextgen docker image with code and tools
     
 ### Automatic Installation inside bcbio docker container
     
-    
+`wget https://raw.github.com/chapmanb/bcbio-nextgen/master/scripts/bcbio_nextgen_install.py`
+
+`python bcbio_nextgen_install.py /usr/local/share/bcbio --tooldir=/usr/local \
+  --genomes GRCh37 --aligners bwa --aligners bowtie2`
+  
+```
+Traceback (most recent call last):
+  File "bcbio_nextgen_install.py", line 257, in <module>
+    main(parser.parse_args(), sys.argv[1:])
+  File "bcbio_nextgen_install.py", line 44, in main
+    subprocess.check_call([bcbio, "upgrade"] + _clean_args(sys_argv, args))
+  File "/root/miniconda3/envs/py2/lib/python2.7/subprocess.py", line 181, in check_call
+    the child.
+  File "/root/miniconda3/envs/py2/lib/python2.7/subprocess.py", line 168, in call
+
+  File "/root/miniconda3/envs/py2/lib/python2.7/subprocess.py", line 390, in __init__
+    mswindows = (sys.platform == "win32")
+  File "/root/miniconda3/envs/py2/lib/python2.7/subprocess.py", line 1025, in _execute_child
+    stdout_thread.start()
+OSError: [Errno 2] No such file or directory
+```
+
 
