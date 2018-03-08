@@ -57,8 +57,8 @@ Could not find input system configuration file bcbio_system.yaml
   
   `bcbio_vm.py --datadir=~/install/bcbio-vm/data install --data --tools --genomes GRCh37 --aligners bwa (to get reference data)`
   
-  ```
-  Retrieving bcbio-nextgen docker image with code and tools 
+```
+Retrieving bcbio-nextgen docker image with code and tools 
   Traceback (most recent call last):
   File "/root/miniconda3/envs/py2/bin/bcbio_vm.py", line 334, in <module>
     args.func(args)
@@ -78,7 +78,8 @@ Could not find input system configuration file bcbio_system.yaml
     raise child_exception
     OSError: [Errno 2] No such file or directory
 ```
-
-
-
+    
+### Automatic Installation inside bcbio docker container
+    
+    
 
