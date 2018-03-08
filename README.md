@@ -103,4 +103,29 @@ Traceback (most recent call last):
 OSError: [Errno 2] No such file or directory
 ```
 
+### New Linux Docker Container
+
+`Docker run -it ubuntu:17.10 -it /bin/bash`
+
+`Apt-get update && apt-get install wget python git`
+
+Next followed the instructions from: http://bcbio-nextgen.readthedocs.io/en/latest/contents/installation.html#automated
+
+`python bcbio_nextgen_install.py /usr/local/share/bcbio --tooldir=/usr/local --genomes GRCh37 --aligners star --datatarget rnaseq`
+
+Followed the steps as mentioned at http://bcbio-nextgen.readthedocs.io/en/latest/contents/testing.html#rnaseq-example
+
+**Data** Got fastq files as mentioned by Rory https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-4119/samples/
+
+Prepared yaml workflow file as edited by Rory on github. The one generated form template is slightly different.
+
+For other steps exactly followed the scripts and steps as mentioned on the documentation - seems like the pipeline is running.
+
+STAR indexing needs a large amount of memory - about 40G.. SO the pipeline was failing at alignment step. https://github.com/chapmanb/bcbio-nextgen/issues/478
+
+```IOError: Could not prepare index star for GRCh37 by any method```
+
+
+
+
 
