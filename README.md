@@ -16,7 +16,7 @@ Following are the final steps that are **working** now.
 1. Initialize docker.  
   - **IMP:** The test data is huge - 100G. So alter docker setting to increase storage/disk space from ~65G to ~250G.
 
-Swith to commandline
+Switch to commandline
 
 2. docker pull bcbio/bcbio
 
@@ -38,14 +38,26 @@ Swith to commandline
 
 Encountered many issues while trying to run a test workflow
 
-* Could not find input system configuration file bcbio_system.yaml
+* `bcbio_nextgen.py ../config/seqc.yaml -n 8`
+
+```Could not find input system configuration file bcbio_system.yaml```
 
   * https://github.com/chapmanb/bcbio-nextgen/issues/1398 and https://github.com/chapmanb/bcbio-nextgen/issues/2091 suggested to use bcbio-vm on mac.
+  
   * https://github.com/chapmanb/bcbio-nextgen-vm suggests this is still a work in progress
   
 * bcbio-nextgen-vm also takes care of reference data used in the pipeline
 
 * Used conda to install bcbio-nextgen-vm
+
+  `conda install bcbio-nextgen-vm -c bioconda` (failed)
+
+  `conda install bcbio-nextgen-vm` (failed)
+
+  `source deactivate`
+
+Bcbio works with python 2. Container inside docker was I guess set to using python 3. So manually set a mini virtual envm for python 2 using the following command:
+
   `conda create -n py2 python=2`
   
   `conda activate py2`
@@ -125,6 +137,8 @@ STAR indexing needs a large amount of memory - about 40G.. SO the pipeline was f
 
 ```IOError: Could not prepare index star for GRCh37 by any method```
 
+
+**As a result of all these steps, switched my focus to Spartan to setup personal bcbio installation**
 
 
 
